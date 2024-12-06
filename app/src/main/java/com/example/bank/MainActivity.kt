@@ -39,7 +39,9 @@ import androidx.compose.material.icons.filled.AddCircle
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.Email
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Menu
@@ -50,6 +52,7 @@ import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.rounded.AccountBox
 import androidx.compose.material.icons.rounded.Lock
+import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.CenterAlignedTopAppBar
@@ -89,7 +92,6 @@ class MainActivity : ComponentActivity() {
         setContent {
             Box(Modifier.background(color = Color.DarkGray).fillMaxSize()) {
             scrollBox()
-                permission()
             }
         }
     }
@@ -153,9 +155,82 @@ Row(
         )
 }
 }
+
+@Composable
+fun bottomMenu(){
+    BottomAppBar(modifier = Modifier.fillMaxWidth().height(70.dp),
+        containerColor = Color.DarkGray) {
+
+        Row(modifier = Modifier.fillMaxSize(),
+            horizontalArrangement = Arrangement.SpaceEvenly) {
+
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+
+                Icon(
+                    imageVector = Icons.Default.Menu,
+                    contentDescription = "icon",
+                    Modifier.size(70.dp).weight(0.9f),
+                    tint = Color.White
+                )
+
+                Text(text = "Главный")
+            }
+
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+
+                Icon(
+                    imageVector = Icons.Default.Search,
+                    contentDescription = "icon",
+                    Modifier.size(70.dp).weight(0.9f),
+                    tint = Color.White
+                )
+
+                Text(text = "Накопления")
+            }
+
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+
+                Icon(
+                    imageVector = Icons.Default.Star,
+                    contentDescription = "icon",
+                    Modifier.size(70.dp).weight(0.9f),
+                    tint = Color.White
+                )
+
+                Text(text = "Для жизни")
+            }
+
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+
+                Icon(
+                    imageVector = Icons.Default.Info,
+                    contentDescription = "icon",
+                    Modifier.size(70.dp).weight(0.9f),
+                    tint = Color.White
+                )
+
+                Text(text = "Платежи")
+            }
+
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+
+                Icon(
+                    imageVector = Icons.Default.DateRange,
+                    contentDescription = "icon",
+                    Modifier.size(70.dp).weight(0.9f),
+                    tint = Color.White
+                )
+
+                Text(text = "История")
+            }
+        }
+    }
+}
+
 @Composable
 fun scrollBox() {
-    Column(modifier = Modifier.fillMaxSize().padding(5.dp, top = 80.dp).verticalScroll(rememberScrollState())) {
+    Column(modifier = Modifier.fillMaxSize()) {
+    Column(modifier = Modifier.fillMaxSize().weight(0.85f).padding(5.dp, top = 60.dp, end = 5.dp).verticalScroll(rememberScrollState())) {
 
         Row(modifier = Modifier.height(45.dp)) {
 
@@ -936,7 +1011,8 @@ fun scrollBox() {
             }
         }
     }
+        bottomMenu()
+    }
 
     topMenu()
 }
-
