@@ -90,7 +90,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            Box(Modifier.background(color = Color.DarkGray).fillMaxSize()) {
+            Box(Modifier.background(color = Color(0xFF2c2c2c)).fillMaxSize()) {
             scrollBox()
             }
         }
@@ -112,7 +112,7 @@ fun topMenu(
 ) {
     var text = "Поиск"
 Row(
-    modifier = Modifier.height(60.dp).fillMaxWidth().background(Color.DarkGray),
+    modifier = Modifier.height(60.dp).fillMaxWidth().background(color = Color(0xFF2c2c2c)),
     verticalAlignment = Alignment.CenterVertically,
     horizontalArrangement = Arrangement.SpaceEvenly
 ) {
@@ -126,7 +126,7 @@ Row(
         FilledTonalButton(onClick = { click() },
             shape = RoundedCornerShape(30),
             modifier = Modifier.width(250.dp).height(40.dp),
-            colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.5f),
+            colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.2f),
             contentColor = Color.White,
             disabledContentColor = Color.Red,
             disabledContainerColor = Color.Blue,),
@@ -159,7 +159,7 @@ Row(
 @Composable
 fun bottomMenu(){
     BottomAppBar(modifier = Modifier.fillMaxWidth().height(70.dp),
-        containerColor = Color.DarkGray) {
+        containerColor = Color(0xFF2c2c2c)) {
 
         Row(modifier = Modifier.fillMaxSize(),
             horizontalArrangement = Arrangement.SpaceEvenly) {
@@ -173,7 +173,8 @@ fun bottomMenu(){
                     tint = Color.White
                 )
 
-                Text(text = "Главный")
+                Text(text = "Главный",
+                    color = Color.White)
             }
 
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
@@ -185,7 +186,8 @@ fun bottomMenu(){
                     tint = Color.White
                 )
 
-                Text(text = "Накопления")
+                Text(text = "Накопления",
+                    color = Color.White)
             }
 
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
@@ -197,7 +199,8 @@ fun bottomMenu(){
                     tint = Color.White
                 )
 
-                Text(text = "Для жизни")
+                Text(text = "Для жизни",
+                    color = Color.White)
             }
 
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
@@ -209,7 +212,8 @@ fun bottomMenu(){
                     tint = Color.White
                 )
 
-                Text(text = "Платежи")
+                Text(text = "Платежи",
+                    color = Color.White)
             }
 
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
@@ -221,7 +225,8 @@ fun bottomMenu(){
                     tint = Color.White
                 )
 
-                Text(text = "История")
+                Text(text = "История",
+                    color = Color.White)
             }
         }
     }
@@ -238,11 +243,13 @@ fun scrollBox() {
 
                 Text(
                     text = "В кошельке",
+                    color = Color.White
                 )
 
                 Text(
                     fontSize = 5.em,
                     text = "500.75 ₽ >",
+                    color = Color.White
                 )
             }
 
@@ -273,7 +280,7 @@ fun scrollBox() {
                 FilledTonalButton(onClick = { click() },
                     shape = RoundedCornerShape(30),
                     contentPadding = PaddingValues(5.dp),
-                    colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.5f),
+                    colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.2f),
                         contentColor = Color.White,
                         disabledContentColor = Color.Red,
                         disabledContainerColor = Color.Blue,),
@@ -289,7 +296,7 @@ fun scrollBox() {
                 FilledTonalButton(onClick = { click() },
                     shape = RoundedCornerShape(30),
                     contentPadding = PaddingValues(5.dp),
-                    colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.5f),
+                    colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.2f),
                         contentColor = Color.White,
                         disabledContentColor = Color.Red,
                         disabledContainerColor = Color.Blue,),
@@ -307,7 +314,7 @@ fun scrollBox() {
             FilledTonalButton(onClick = { click() },
                 shape = RoundedCornerShape(20),
                 contentPadding = PaddingValues(15.dp),
-                colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.5f),
+                colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.2f),
                     contentColor = Color.White,
                     disabledContentColor = Color.Red,
                     disabledContainerColor = Color.Blue,),
@@ -336,7 +343,7 @@ fun scrollBox() {
             FilledTonalButton(onClick = { click() },
                 shape = RoundedCornerShape(20),
                 contentPadding = PaddingValues(15.dp),
-                colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.5f),
+                colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.2f),
                     contentColor = Color.White,
                     disabledContentColor = Color.Red,
                     disabledContainerColor = Color.Blue,),
@@ -365,7 +372,7 @@ fun scrollBox() {
             FilledTonalButton(onClick = { click() },
                 shape = RoundedCornerShape(20),
                 contentPadding = PaddingValues(15.dp),
-                colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.5f),
+                colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.2f),
                     contentColor = Color.White,
                     disabledContentColor = Color.Red,
                     disabledContainerColor = Color.Blue,),
@@ -394,7 +401,7 @@ fun scrollBox() {
             FilledTonalButton(onClick = { click() },
                 shape = RoundedCornerShape(20),
                 contentPadding = PaddingValues(15.dp),
-                colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.5f),
+                colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.2f),
                     contentColor = Color.White,
                     disabledContentColor = Color.Red,
                     disabledContainerColor = Color.Blue,),
@@ -423,7 +430,7 @@ fun scrollBox() {
             FilledTonalButton(onClick = { click() },
                 shape = RoundedCornerShape(20),
                 contentPadding = PaddingValues(15.dp),
-                colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.5f),
+                colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.2f),
                     contentColor = Color.White,
                     disabledContentColor = Color.Red,
                     disabledContainerColor = Color.Blue,),
@@ -450,10 +457,11 @@ fun scrollBox() {
                 }
             }
         }
-        Column(modifier = Modifier.padding(top = 10.dp).background(color = Color.Gray, shape = RoundedCornerShape(20.dp)).height(200.dp).fillMaxWidth().clip(shape = RoundedCornerShape(20.dp)),) {
+        Column(modifier = Modifier.padding(top = 10.dp).background(color = Color.DarkGray, shape = RoundedCornerShape(20.dp)).height(200.dp).fillMaxWidth().clip(shape = RoundedCornerShape(20.dp)),) {
 
             Text(text = "Переводы",
                 fontSize = 5.em,
+                color = Color.White,
                 modifier = Modifier.fillMaxWidth().height(50.dp).padding(10.dp))
 
             Row(modifier = Modifier.fillMaxSize().padding(top = 10.dp, start = 10.dp, bottom = 10.dp).horizontalScroll(rememberScrollState())
@@ -476,7 +484,7 @@ fun scrollBox() {
                             imageVector = Icons.Default.ArrowForward,
                             contentDescription = "Card icon",
                             tint = Color.White,
-                            modifier = Modifier.height(80.dp).width(80.dp).background(color = Color.Green, shape = RoundedCornerShape(20.dp)).padding(20.dp)
+                            modifier = Modifier.height(80.dp).width(80.dp).background(color = Color.Green.copy(alpha = 0.5f), shape = RoundedCornerShape(20.dp)).padding(20.dp)
                         )
 
                         Text(text = "Новый перевод", textAlign = TextAlign.Center)
@@ -497,7 +505,7 @@ fun scrollBox() {
                         modifier = Modifier.fillMaxSize()) {
 
                         Box(
-                            modifier = Modifier.height(80.dp).width(80.dp).background(color = Color.DarkGray, shape = RoundedCornerShape(20.dp)).padding(20.dp),
+                            modifier = Modifier.height(80.dp).width(80.dp).background(color = Color.Gray, shape = RoundedCornerShape(20.dp)).padding(20.dp),
                             contentAlignment = Alignment.Center
                         ) {
                             Text(text = "ИС",
@@ -523,7 +531,7 @@ fun scrollBox() {
                         modifier = Modifier.fillMaxSize()) {
 
                         Box(
-                            modifier = Modifier.height(80.dp).width(80.dp).background(color = Color.DarkGray, shape = RoundedCornerShape(20.dp)).padding(20.dp),
+                            modifier = Modifier.height(80.dp).width(80.dp).background(color = Color.Gray, shape = RoundedCornerShape(20.dp)).padding(20.dp),
                             contentAlignment = Alignment.Center
                         ) {
                             Text(text = "ИС",
@@ -549,7 +557,7 @@ fun scrollBox() {
                         modifier = Modifier.fillMaxSize()) {
 
                         Box(
-                            modifier = Modifier.height(80.dp).width(80.dp).background(color = Color.DarkGray, shape = RoundedCornerShape(20.dp)).padding(20.dp),
+                            modifier = Modifier.height(80.dp).width(80.dp).background(color = Color.Gray, shape = RoundedCornerShape(20.dp)).padding(20.dp),
                             contentAlignment = Alignment.Center
                         ) {
                             Text(text = "ИС",
@@ -578,7 +586,7 @@ fun scrollBox() {
                             imageVector = Icons.Default.Send,
                             contentDescription = "icon",
                             tint = Color.White,
-                            modifier = Modifier.height(80.dp).width(80.dp).background(color = Color.DarkGray, shape = RoundedCornerShape(20.dp)).padding(20.dp)
+                            modifier = Modifier.height(80.dp).width(80.dp).background(color = Color.Gray, shape = RoundedCornerShape(20.dp)).padding(20.dp)
                         )
 
                         Text(text = "Чаты и сборы", textAlign = TextAlign.Center)
@@ -586,11 +594,12 @@ fun scrollBox() {
                 }
             }
         }
-        Column(modifier = Modifier.padding(top = 10.dp).background(color = Color.Gray, shape = RoundedCornerShape(20.dp)).height(250.dp).fillMaxWidth().clip(shape = RoundedCornerShape(20.dp)),) {
+        Column(modifier = Modifier.padding(top = 10.dp).background(color = Color.DarkGray, shape = RoundedCornerShape(20.dp)).height(250.dp).fillMaxWidth().clip(shape = RoundedCornerShape(20.dp)),) {
             Row(modifier = Modifier.fillMaxWidth().height(50.dp)) {
                 Column() {
                     Text(text = "Расходы в декабре",
                         fontSize = 5.em,
+                        color = Color.White,
                         modifier = Modifier.padding(10.dp))
                 }
                 Column(horizontalAlignment = Alignment.End,
@@ -606,7 +615,7 @@ fun scrollBox() {
 
                         Text(text = "Все",
                             fontSize = 4.em,
-                            color = Color.Green)
+                            color = Color.Green.copy(alpha = 0.5f))
                     }
                 }
             }
@@ -616,7 +625,7 @@ fun scrollBox() {
                 FilledTonalButton(onClick = { click() },
                     shape = RoundedCornerShape(20),
                     contentPadding = PaddingValues(15.dp),
-                    colors = ButtonColors(containerColor = Color.DarkGray.copy(alpha = 0.2f),
+                    colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.2f),
                         contentColor = Color.White,
                         disabledContentColor = Color.Red,
                         disabledContainerColor = Color.Blue,),
@@ -645,7 +654,7 @@ fun scrollBox() {
                 FilledTonalButton(onClick = { click() },
                     shape = RoundedCornerShape(20),
                     contentPadding = PaddingValues(15.dp),
-                    colors = ButtonColors(containerColor = Color.DarkGray.copy(alpha = 0.2f),
+                    colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.2f),
                         contentColor = Color.White,
                         disabledContentColor = Color.Red,
                         disabledContainerColor = Color.Blue,),
@@ -677,7 +686,7 @@ fun scrollBox() {
                 OutlinedButton(onClick = { click() },
                     shape = RoundedCornerShape(20),
                     contentPadding = PaddingValues(15.dp),
-                    colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.5f),
+                    colors = ButtonColors(containerColor = Color.DarkGray.copy(alpha = 0.5f),
                         contentColor = Color.White,
                         disabledContentColor = Color.Red,
                         disabledContainerColor = Color.Blue,),
@@ -704,11 +713,12 @@ fun scrollBox() {
             }
         }
 
-        Row(modifier = Modifier.padding(top = 10.dp).background(color = Color.Gray,
+        Row(modifier = Modifier.padding(top = 10.dp).background(color = Color.DarkGray,
             shape = RoundedCornerShape(20.dp)).height(50.dp).fillMaxWidth().clip(shape = RoundedCornerShape(20.dp)),) {
 
             Text(text = "Кредиты",
                 fontSize = 5.em,
+                color = Color.White,
                 modifier = Modifier.padding(10.dp).width(100.dp).fillMaxHeight())
 
             Icon(
@@ -733,18 +743,19 @@ fun scrollBox() {
                     Icon(
                     imageVector = Icons.Default.Add,
                     contentDescription = "icon",
-                    tint = Color.Green,
+                    tint = Color.Green.copy(alpha = 0.5f),
                     modifier = Modifier.fillMaxSize())
                 }
             }
         }
 
-        Column(modifier = Modifier.padding(top = 10.dp).background(color = Color.Gray, shape = RoundedCornerShape(20.dp)).height(250.dp).fillMaxWidth().clip(shape = RoundedCornerShape(20.dp))) {
+        Column(modifier = Modifier.padding(top = 10.dp).background(color = Color.DarkGray, shape = RoundedCornerShape(20.dp)).height(250.dp).fillMaxWidth().clip(shape = RoundedCornerShape(20.dp))) {
 
             Row(modifier = Modifier.fillMaxWidth().height(50.dp)) {
 
                 Text(text = "Сервисы",
                     fontSize = 5.em,
+                    color = Color.White,
                     modifier = Modifier.padding(10.dp))
             }
 
@@ -754,7 +765,7 @@ fun scrollBox() {
                 FilledTonalButton(onClick = { click() },
                     shape = RoundedCornerShape(20),
                     contentPadding = PaddingValues(15.dp),
-                    colors = ButtonColors(containerColor = Color.DarkGray.copy(alpha = 0.2f),
+                    colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.2f),
                         contentColor = Color.White,
                         disabledContentColor = Color.Red,
                         disabledContainerColor = Color.Blue,),
@@ -765,7 +776,7 @@ fun scrollBox() {
                         Icon(
                             imageVector = Icons.Default.AddCircle,
                             contentDescription = "Card icon",
-                            tint = Color.Green,
+                            tint = Color.Green.copy(alpha = 0.5f),
                             modifier = Modifier.fillMaxHeight(0.5f).fillMaxWidth(0.5f).align(Alignment.Start)
                         )
 
@@ -787,7 +798,7 @@ fun scrollBox() {
                 FilledTonalButton(onClick = { click() },
                     shape = RoundedCornerShape(20),
                     contentPadding = PaddingValues(15.dp),
-                    colors = ButtonColors(containerColor = Color.DarkGray.copy(alpha = 0.2f),
+                    colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.2f),
                         contentColor = Color.White,
                         disabledContentColor = Color.Red,
                         disabledContainerColor = Color.Blue,),
@@ -798,7 +809,7 @@ fun scrollBox() {
                         Icon(
                             imageVector = Icons.Default.ShoppingCart,
                             contentDescription = "Card icon",
-                            tint = Color.Green,
+                            tint = Color.Green.copy(alpha = 0.5f),
                             modifier = Modifier.fillMaxHeight(0.5f).fillMaxWidth(0.5f).align(Alignment.Start)
                         )
 
@@ -820,7 +831,7 @@ fun scrollBox() {
                 FilledTonalButton(onClick = { click() },
                     shape = RoundedCornerShape(20),
                     contentPadding = PaddingValues(15.dp),
-                    colors = ButtonColors(containerColor = Color.DarkGray.copy(alpha = 0.2f),
+                    colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.2f),
                         contentColor = Color.White,
                         disabledContentColor = Color.Red,
                         disabledContainerColor = Color.Blue,),
@@ -831,7 +842,7 @@ fun scrollBox() {
                         Icon(
                             imageVector = Icons.Default.Menu,
                             contentDescription = "Card icon",
-                            tint = Color.Green,
+                            tint = Color.Green.copy(alpha = 0.5f),
                             modifier = Modifier.fillMaxHeight(0.5f).fillMaxWidth(0.5f).align(Alignment.Start)
                         )
 
@@ -847,12 +858,13 @@ fun scrollBox() {
             }
         }
 
-        Column(modifier = Modifier.padding(top = 10.dp).background(color = Color.Gray, shape = RoundedCornerShape(20.dp)).height(330.dp).fillMaxWidth().clip(shape = RoundedCornerShape(20.dp))) {
+        Column(modifier = Modifier.padding(top = 10.dp).background(color = Color.DarkGray, shape = RoundedCornerShape(20.dp)).height(330.dp).fillMaxWidth().clip(shape = RoundedCornerShape(20.dp))) {
 
             Row(modifier = Modifier.fillMaxWidth().height(50.dp)) {
 
                 Text(text = "Рекомендуем",
                     fontSize = 5.em,
+                    color = Color.White,
                     modifier = Modifier.padding(10.dp))
 
                 Row(modifier = Modifier.fillMaxSize(),
@@ -869,7 +881,7 @@ fun scrollBox() {
 
                         Text(text = "Все",
                             fontSize = 4.em,
-                            color = Color.Green)
+                            color = Color.Green.copy(alpha = 0.5f))
                     }
                 }
             }
@@ -880,7 +892,7 @@ fun scrollBox() {
                 FilledTonalButton(onClick = { click() },
                     shape = RoundedCornerShape(20),
                     contentPadding = PaddingValues(0.dp),
-                    colors = ButtonColors(containerColor = Color.DarkGray.copy(alpha = 0.2f),
+                    colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.2f),
                         contentColor = Color.White,
                         disabledContentColor = Color.Red,
                         disabledContainerColor = Color.Blue,),
@@ -888,7 +900,7 @@ fun scrollBox() {
 
                     Column(modifier = Modifier.fillMaxSize()) {
 
-                        Row(modifier = Modifier.fillMaxWidth().height(150.dp).background(Color.Green,
+                        Row(modifier = Modifier.fillMaxWidth().height(150.dp).background(Color.Green.copy(alpha = 0.5f),
                             shape = RoundedCornerShape(20.dp)
                         )){}
 
@@ -913,7 +925,7 @@ fun scrollBox() {
                 FilledTonalButton(onClick = { click() },
                     shape = RoundedCornerShape(20),
                     contentPadding = PaddingValues(0.dp),
-                    colors = ButtonColors(containerColor = Color.DarkGray.copy(alpha = 0.2f),
+                    colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.2f),
                         contentColor = Color.White,
                         disabledContentColor = Color.Red,
                         disabledContainerColor = Color.Blue,),
@@ -946,7 +958,7 @@ fun scrollBox() {
                 FilledTonalButton(onClick = { click() },
                     shape = RoundedCornerShape(20),
                     contentPadding = PaddingValues(0.dp),
-                    colors = ButtonColors(containerColor = Color.DarkGray.copy(alpha = 0.2f),
+                    colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.2f),
                         contentColor = Color.White,
                         disabledContentColor = Color.Red,
                         disabledContainerColor = Color.Blue,),
@@ -979,7 +991,7 @@ fun scrollBox() {
                 FilledTonalButton(onClick = { click() },
                     shape = RoundedCornerShape(20),
                     contentPadding = PaddingValues(0.dp),
-                    colors = ButtonColors(containerColor = Color.DarkGray.copy(alpha = 0.2f),
+                    colors = ButtonColors(containerColor = Color.Gray.copy(alpha = 0.2f),
                         contentColor = Color.White,
                         disabledContentColor = Color.Red,
                         disabledContainerColor = Color.Blue,),
